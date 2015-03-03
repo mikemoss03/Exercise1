@@ -14,16 +14,16 @@
 
 @implementation NumberPadViewController
 
+#pragma mark - View Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Getters / Setters
 -(NSNumberFormatter *)numberFormatter
 {
     if(!_numberFormatter)
@@ -35,34 +35,30 @@
     return _numberFormatter;
 }
 
+#pragma mark - Actions
 -(IBAction)numberTapped:(UIButton *)sender
 {
-    if(self.numberTap)
+    if(self.numberTapBlock)
     {
         NSNumber *number = [self.numberFormatter numberFromString:[sender titleForState:UIControlStateNormal]];
-        self.numberTap(number);
+        self.numberTapBlock(number);
     }
-    
-//    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)clear:(id)sender
 {
-    self.clear();
+    if(self.clearBlock)
+    {
+        self.clearBlock();
+    }
 }
 
 -(IBAction)done:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if(self.doneBlock)
+    {
+        self.doneBlock();
+    }
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

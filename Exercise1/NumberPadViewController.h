@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface NumberPadViewController : UIViewController
-@property (nonatomic, strong) void (^numberTap)(NSNumber *);
-@property (nonatomic, strong) void (^clear)();
+//Action Blocks
+@property (nonatomic, strong) void (^numberTapBlock)(NSNumber *);
+@property (nonatomic, strong) void (^clearBlock)();
+@property (nonatomic, strong) void (^doneBlock)();
+
 @end

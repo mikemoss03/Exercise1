@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OperationsViewController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<OperationsPopoverDelegate, UIPopoverPresentationControllerDelegate>
 
 
 @end

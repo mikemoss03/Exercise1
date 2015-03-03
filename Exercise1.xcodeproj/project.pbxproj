@@ -15,7 +15,8 @@
 		27AAB1E41AA4EB6D009E40A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27AAB1E21AA4EB6D009E40A9 /* LaunchScreen.xib */; };
 		27AAB1F01AA4EB6D009E40A9 /* Exercise1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB1EF1AA4EB6D009E40A9 /* Exercise1Tests.m */; };
 		27AAB1FB1AA4F1A6009E40A9 /* NumberPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB1FA1AA4F1A6009E40A9 /* NumberPadViewController.m */; };
-		27AAB1FE1AA4F1CF009E40A9 /* OperandsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB1FD1AA4F1CF009E40A9 /* OperandsViewController.m */; };
+		27AAB1FE1AA4F1CF009E40A9 /* OperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB1FD1AA4F1CF009E40A9 /* OperationsViewController.m */; };
+		27AAB2181AA5305F009E40A9 /* CalculatorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB2171AA5305F009E40A9 /* CalculatorEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +45,10 @@
 		27AAB1EF1AA4EB6D009E40A9 /* Exercise1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Exercise1Tests.m; sourceTree = "<group>"; };
 		27AAB1F91AA4F1A6009E40A9 /* NumberPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberPadViewController.h; sourceTree = "<group>"; };
 		27AAB1FA1AA4F1A6009E40A9 /* NumberPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberPadViewController.m; sourceTree = "<group>"; };
-		27AAB1FC1AA4F1CF009E40A9 /* OperandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperandsViewController.h; sourceTree = "<group>"; };
-		27AAB1FD1AA4F1CF009E40A9 /* OperandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperandsViewController.m; sourceTree = "<group>"; };
+		27AAB1FC1AA4F1CF009E40A9 /* OperationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationsViewController.h; sourceTree = "<group>"; };
+		27AAB1FD1AA4F1CF009E40A9 /* OperationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationsViewController.m; sourceTree = "<group>"; };
+		27AAB2161AA5305F009E40A9 /* CalculatorEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorEngine.h; sourceTree = "<group>"; };
+		27AAB2171AA5305F009E40A9 /* CalculatorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +92,9 @@
 			children = (
 				27AAB1D71AA4EB6D009E40A9 /* AppDelegate.h */,
 				27AAB1D81AA4EB6D009E40A9 /* AppDelegate.m */,
-				27AAB1DA1AA4EB6D009E40A9 /* MainViewController.h */,
-				27AAB1DB1AA4EB6D009E40A9 /* MainViewController.m */,
-				27AAB1DD1AA4EB6D009E40A9 /* Main.storyboard */,
-				27AAB1F91AA4F1A6009E40A9 /* NumberPadViewController.h */,
-				27AAB1FA1AA4F1A6009E40A9 /* NumberPadViewController.m */,
-				27AAB1FC1AA4F1CF009E40A9 /* OperandsViewController.h */,
-				27AAB1FD1AA4F1CF009E40A9 /* OperandsViewController.m */,
+				27AAB21B1AA53520009E40A9 /* Helpers */,
+				27AAB2191AA53322009E40A9 /* Controllers */,
+				27AAB21A1AA53331009E40A9 /* Storyboards */,
 				27AAB1E01AA4EB6D009E40A9 /* Images.xcassets */,
 				27AAB1E21AA4EB6D009E40A9 /* LaunchScreen.xib */,
 				27AAB1D31AA4EB6D009E40A9 /* Supporting Files */,
@@ -127,6 +126,36 @@
 				27AAB1EE1AA4EB6D009E40A9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27AAB2191AA53322009E40A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27AAB1DA1AA4EB6D009E40A9 /* MainViewController.h */,
+				27AAB1DB1AA4EB6D009E40A9 /* MainViewController.m */,
+				27AAB1F91AA4F1A6009E40A9 /* NumberPadViewController.h */,
+				27AAB1FA1AA4F1A6009E40A9 /* NumberPadViewController.m */,
+				27AAB1FC1AA4F1CF009E40A9 /* OperationsViewController.h */,
+				27AAB1FD1AA4F1CF009E40A9 /* OperationsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		27AAB21A1AA53331009E40A9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				27AAB1DD1AA4EB6D009E40A9 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		27AAB21B1AA53520009E40A9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				27AAB2161AA5305F009E40A9 /* CalculatorEngine.h */,
+				27AAB2171AA5305F009E40A9 /* CalculatorEngine.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27AAB1FE1AA4F1CF009E40A9 /* OperandsViewController.m in Sources */,
+				27AAB1FE1AA4F1CF009E40A9 /* OperationsViewController.m in Sources */,
 				27AAB1DC1AA4EB6D009E40A9 /* MainViewController.m in Sources */,
 				27AAB1FB1AA4F1A6009E40A9 /* NumberPadViewController.m in Sources */,
+				27AAB2181AA5305F009E40A9 /* CalculatorEngine.m in Sources */,
 				27AAB1D91AA4EB6D009E40A9 /* AppDelegate.m in Sources */,
 				27AAB1D61AA4EB6D009E40A9 /* main.m in Sources */,
 			);
@@ -426,6 +456,7 @@
 				27AAB1F51AA4EB6D009E40A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27AAB1F61AA4EB6D009E40A9 /* Build configuration list for PBXNativeTarget "Exercise1Tests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +465,7 @@
 				27AAB1F81AA4EB6D009E40A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
